@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>PEASIS Fashion | Custom Clothing, Occasionwear & African-Inspired Pieces</title>
-
   <meta name="description" content="PEASIS Fashion is a designer-led custom fashion brand built on over 30 years of craftsmanship, creating custom clothing, occasionwear, African-inspired pieces, and tailored looks with care.">
-
-  <link rel="icon" type="image/png" href="Favicon. Png.png">
-  <link rel="stylesheet" href="style.css" />
 
   <meta property="og:title" content="PEASIS Fashion | Designer-Led Custom Fashion">
   <meta property="og:description" content="Custom clothing, occasionwear, African-inspired pieces, and tailored looks made with over 30 years of design experience.">
@@ -17,483 +13,750 @@
   <meta property="og:url" content="https://peasis.com">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="PEASIS Fashion">
-
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="PEASIS Fashion | Designer-Led Custom Fashion">
   <meta name="twitter:description" content="Custom clothing, occasionwear, African-inspired pieces, and tailored looks made with over 30 years of design experience.">
   <meta name="twitter:image" content="https://peasis.com/images/emerald-green-beaded-illusion-gown-1.jpg">
+
+  <link rel="icon" type="image/png" href="Favicon. Png.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="page-loader" id="pageLoader">
-    <img src="Peasis logo 1. png.png" alt="PEASIS Fashion logo">
-    <span>Crafting your experience</span>
-  </div>
 
-  <header class="site-header" id="siteHeader">
-    <a href="#home" class="logo-link" aria-label="PEASIS Fashion home">
-      <img src="Peasis logo 1. png.png" alt="PEASIS Fashion logo" class="site-logo">
-    </a>
+  <!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <img src="Peasis_logo_1._png-removebg-preview.png" alt="PEASIS Fashion" class="logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#designer">The Designer</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#motion">In Motion</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-    <nav class="nav-links" id="navLinks">
-      <a href="#designer">The Designer</a>
-      <a href="#collections">Collections</a>
-      <a href="#motion">In Motion</a>
-      <a href="#packages">Packages</a>
-      <a href="#process">Process</a>
-      <a href="#contact">Contact</a>
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">&#x2715;</button>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="#home" class="mobile-link">Home</a></li>
+        <li><a href="#designer" class="mobile-link">The Designer</a></li>
+        <li><a href="#collections" class="mobile-link">Collections</a></li>
+        <li><a href="#motion" class="mobile-link">In Motion</a></li>
+        <li><a href="#packages" class="mobile-link">Packages</a></li>
+        <li><a href="#process" class="mobile-link">Process</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+      <div class="mobile-menu-footer">
+        <p>styleimagestun@gmail.com</p>
+      </div>
     </nav>
+  </div>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
 
-    <a href="mailto:styleimagestun@gmail.com?subject=PEASIS%20Fashion%20Inquiry" class="header-cta">Begin Inquiry</a>
-
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
-      <span></span>
-      <span></span>
-    </button>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-bg-mark">P</div>
-
-      <div class="hero-content reveal">
-        <p class="eyebrow">Designer-led custom fashion</p>
-        <h1>Designed by hands with over 30 years of experience.</h1>
-        <p class="hero-copy">
-          PEASIS Fashion is a custom fashion house shaped by legacy, craft, and personal design. We create pieces that style your image with presence, elegance, and intention.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#collections" class="btn btn-dark">View Collections</a>
-          <a href="mailto:styleimagestun@gmail.com?subject=PEASIS%20Fashion%20Inquiry" class="btn btn-light">Begin an Inquiry</a>
-        </div>
-
-        <div class="hero-signature">
-          <span>Style</span>
-          <span>Image</span>
-          <span>Stun</span>
-        </div>
-      </div>
-
-      <div class="hero-visual reveal">
-        <div class="hero-main-card">
-          <img src="images/head-designer-custom-fitting-session-1.jpg" alt="PEASIS head designer during a fitting session">
-        </div>
-
-        <div class="hero-float-card">
-          <img src="images/emerald-green-beaded-illusion-gown-1.jpg" alt="Emerald green beaded illusion gown">
-        </div>
-
-        <div class="experience-seal">
-          <strong>30+</strong>
-          <span>Years of fashion craft</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="brand-philosophy reveal">
-      <div class="philosophy-symbol">
-        <img src="Favicon. Png.png" alt="PEASIS peacock monogram">
-      </div>
-
-      <div class="philosophy-copy">
-        <p class="eyebrow">The PEASIS idea</p>
-        <h2>We style the image, so the presence can stun.</h2>
-        <p>
-          The peacock stands for beauty, poise, distinction, and the confidence to be seen. PEASIS carries that idea into fashion: clothing as identity, memory, and presence — not just fabric.
-        </p>
-      </div>
-    </section>
-
-    <section class="designer-section" id="designer">
-      <div class="designer-grid">
-        <div class="designer-images reveal">
-          <img src="images/head-designer-custom-fitting-session-2.jpg" alt="PEASIS head designer fitting a custom piece" class="designer-img-main">
-          <img src="images/original-style-image-studio.1.jpg" alt="Original Style Image studio" class="designer-img-small">
-        </div>
-
-        <div class="designer-copy reveal">
-          <p class="eyebrow">Meet the Head Designer</p>
-          <h2>A lifetime of fashion, rebuilt with purpose.</h2>
-          <p>
-            PEASIS is led by a Lagos-based head designer with over three decades of experience shaping fabric into clothing people can feel proud to wear.
-          </p>
-          <p>
-            After years of building her craft and running her own shop, PEASIS is a renewed chapter — not a beginning from empty hands, but a return to mastery, care, and the work she never stopped loving.
-          </p>
-          <a href="#process" class="text-link">See the personal process</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="collections-section" id="collections">
-      <div class="section-intro reveal">
-        <p class="eyebrow">Signature Collections</p>
-        <h2>Curated pieces, not a crowded gallery.</h2>
-        <p>
-          Explore PEASIS through visual chapters — occasionwear, lace, timeless black pieces, African-inspired styling, and client experience.
-        </p>
-      </div>
-
-      <div class="collection-block collection-editorial reveal" data-carousel>
-        <div class="collection-heading">
-          <div>
-            <p class="eyebrow">01 · Occasionwear</p>
-            <h3>Pieces made for entrances, memories, and soft drama.</h3>
-          </div>
-          <div class="carousel-controls">
-            <button class="carousel-btn prev" aria-label="Previous">←</button>
-            <button class="carousel-btn next" aria-label="Next">→</button>
-          </div>
-        </div>
-
-        <div class="carousel-track">
-          <article class="look-card large-look">
-            <img src="images/emerald-green-beaded-illusion-gown-2.jpg" alt="Emerald green beaded illusion gown">
-            <div>
-              <span>Emerald Occasion</span>
-              <h4>Beaded Illusion Gown</h4>
-            </div>
-          </article>
-
-          <article class="look-card">
-            <img src="images/lavender-beaded-bow-sleeve-occasion-dress-1.jpg" alt="Lavender beaded bow sleeve occasion dress">
-            <div>
-              <span>Lavender Detail</span>
-              <h4>Bow Sleeve Occasion Dress</h4>
-            </div>
-          </article>
-
-          <article class="look-card">
-            <img src="images/lavender-beaded-bow-sleeve-occasion-dress-2.jpg" alt="Lavender occasion dress">
-            <div>
-              <span>Soft Structure</span>
-              <h4>Elegant Beaded Finish</h4>
-            </div>
-          </article>
-
-          <article class="look-card">
-            <img src="images/wine-gold-lace-evening-gown-1.jpg" alt="Wine and gold lace evening gown">
-            <div>
-              <span>Evening Look</span>
-              <h4>Wine & Gold Lace Gown</h4>
-            </div>
-          </article>
-
-          <article class="look-card">
-            <img src="images/wine-gold-lace-evening-gown-2.jpg" alt="Wine gold lace gown detail">
-            <div>
-              <span>Regal Warmth</span>
-              <h4>Lace Evening Detail</h4>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <div class="collection-block collection-lace reveal" data-carousel>
-        <div class="collection-heading">
-          <div>
-            <p class="eyebrow">02 · Bridal & Lace</p>
-            <h3>Texture, detail, and the quiet power of finish.</h3>
-          </div>
-          <div class="carousel-controls">
-            <button class="carousel-btn prev" aria-label="Previous">←</button>
-            <button class="carousel-btn next" aria-label="Next">→</button>
-          </div>
-        </div>
-
-        <div class="carousel-track lace-track">
-          <article class="lace-card">
-            <img src="images/white-lace-corset-bridal-gown-1.jpg" alt="White lace corset bridal gown">
-            <h4>White Lace Corset Gown</h4>
-          </article>
-
-          <article class="lace-card">
-            <img src="images/white-lace-corset-bridal-gown-2.jpg" alt="White lace corset bridal gown view two">
-            <h4>Bridal-Inspired Structure</h4>
-          </article>
-
-          <article class="lace-card">
-            <img src="images/white-lace-corset-bridal-gown-3.jpg" alt="White lace corset bridal gown view three">
-            <h4>Soft Lace Finish</h4>
-          </article>
-
-          <article class="lace-card">
-            <img src="images/emerald-beaded-net-lace-detail.jpg" alt="Emerald beaded net lace detail">
-            <h4>Emerald Beaded Net Lace</h4>
-          </article>
-
-          <article class="lace-card">
-            <img src="images/lavender-beaded-lace-detail.jpg" alt="Lavender beaded lace detail">
-            <h4>Lavender Beaded Lace</h4>
-          </article>
-        </div>
-      </div>
-
-      <div class="collection-block black-edit reveal" data-carousel>
-        <div class="collection-heading">
-          <div>
-            <p class="eyebrow">03 · The Black Edit</p>
-            <h3>Timeless silhouettes with clean confidence.</h3>
-          </div>
-          <div class="carousel-controls">
-            <button class="carousel-btn prev" aria-label="Previous">←</button>
-            <button class="carousel-btn next" aria-label="Next">→</button>
-          </div>
-        </div>
-
-        <div class="carousel-track black-track">
-          <article class="black-card">
-            <img src="images/black-fit-and-flare-midi-dress-1.jpg" alt="Black fit and flare midi dress">
-            <span>Fit & Flare Midi</span>
-          </article>
-          <article class="black-card">
-            <img src="images/black-fit-and-flare-midi-dress-2.jpg" alt="Black fit and flare midi dress view two">
-            <span>Elegant Midi Shape</span>
-          </article>
-          <article class="black-card">
-            <img src="images/black-off-shoulder-ruffle-maxi-dress-1.jpg" alt="Black off shoulder ruffle maxi dress">
-            <span>Off-Shoulder Ruffle Maxi</span>
-          </article>
-          <article class="black-card">
-            <img src="images/classic-black-button-pencil-dress-1.jpg" alt="Classic black button pencil dress">
-            <span>Button Pencil Dress</span>
-          </article>
-          <article class="black-card">
-            <img src="images/classic-black-button-pencil-dress-4.jpg" alt="Classic black button pencil dress view four">
-            <span>Polished Structure</span>
-          </article>
-        </div>
-      </div>
-
-      <div class="collection-block statement-sets reveal" data-carousel>
-        <div class="collection-heading">
-          <div>
-            <p class="eyebrow">04 · Ankara & Statement Sets</p>
-            <h3>Color, movement, print, and expressive styling.</h3>
-          </div>
-          <div class="carousel-controls">
-            <button class="carousel-btn prev" aria-label="Previous">←</button>
-            <button class="carousel-btn next" aria-label="Next">→</button>
-          </div>
-        </div>
-
-        <div class="carousel-track statement-track">
-          <article class="statement-card">
-            <img src="images/ankara-tie-front-two-piece-set-1.jpg" alt="Ankara tie front two piece set">
-            <div>
-              <h4>Ankara Tie-Front Two-Piece</h4>
-              <p>Bright, confident, and modern.</p>
-            </div>
-          </article>
-
-          <article class="statement-card">
-            <img src="images/burgundy-blouse-floral-maxi-skirt-set-1.jpg" alt="Burgundy blouse floral maxi skirt set">
-            <div>
-              <h4>Burgundy Floral Skirt Set</h4>
-              <p>Soft presence with a classic feel.</p>
-            </div>
-          </article>
-
-          <article class="statement-card">
-            <img src="images/printed-wide-leg-pants-1.jpg" alt="Printed wide leg pants">
-            <div>
-              <h4>Printed Wide-Leg Pants</h4>
-              <p>Comfort with visual impact.</p>
-            </div>
-          </article>
-
-          <article class="statement-card">
-            <img src="images/blue-floral-applique-shift-dress.jpg" alt="Blue floral applique shift dress">
-            <div>
-              <h4>Blue Floral Shift Dress</h4>
-              <p>Simple shape, memorable detail.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="motion-section" id="motion">
-      <div class="section-intro reveal">
-        <p class="eyebrow">PEASIS In Motion</p>
-        <h2>From fitting to final look.</h2>
-        <p>
-          Short visual stories of transformation, detail, and the personal process behind each piece.
-        </p>
-      </div>
-
-      <div class="video-grid reveal">
-        <article class="video-card featured-video">
-          <div class="video-frame">
-            <iframe src="https://www.youtube.com/embed/FWt_x0OLYRI" title="Lavender Beaded Lace Detail Transformation Edit" allowfullscreen></iframe>
-          </div>
-          <div>
-            <span>Transformation Edit</span>
-            <h3>Lavender Beaded Lace Detail</h3>
-          </div>
-        </article>
-
-        <article class="video-card">
-          <div class="video-frame">
-            <iframe src="https://www.youtube.com/embed/Rl6ORTzVMAw" title="Green Emerald Beaded Net Lace Detail Transformation Edit" allowfullscreen></iframe>
-          </div>
-          <div>
-            <span>Transformation Edit</span>
-            <h3>Emerald Beaded Net Lace</h3>
-          </div>
-        </article>
-
-        <article class="video-card">
-          <div class="video-frame">
-            <iframe src="https://www.youtube.com/embed/s1Qa2-EkOoY" title="Fitting the lavender wear on the customer" allowfullscreen></iframe>
-          </div>
-          <div>
-            <span>Fitting Process</span>
-            <h3>Care in the fitting room</h3>
-          </div>
-        </article>
-
-        <article class="video-card">
-          <div class="video-frame">
-            <iframe src="https://www.youtube.com/embed/HI3oa2WjcLw" title="Lavender Beaded Lace Detail Full Event Outfit" allowfullscreen></iframe>
-          </div>
-          <div>
-            <span>Final Look</span>
-            <h3>Lavender full event outfit</h3>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="story-section reveal">
-      <div class="story-text">
-        <p class="eyebrow">A renewed chapter</p>
-        <h2>Not a new skill. A legacy finding its stage again.</h2>
-        <p>
-          Years ago, the old shop was lost. But the craft stayed. The hands stayed. The eye stayed. PEASIS is the return of that work with sharper intention — a fashion story rebuilt with dignity, memory, and class.
-        </p>
-      </div>
-
-      <div class="story-photo">
-        <img src="images/original-style-image-studio.1.jpg" alt="Original Style Image studio">
-      </div>
-    </section>
-
-    <section class="packages-section" id="packages">
-      <div class="section-intro centered reveal">
-        <p class="eyebrow">Custom Packages</p>
-        <h2>Begin with the package that fits your vision.</h2>
-        <p>
-          Every piece is quoted with care. Fabric, complexity, embellishment, measurements, timeline, and delivery location all shape the final price.
-        </p>
-      </div>
-
-      <div class="packages-grid reveal">
-        <article class="package-card">
-          <span class="package-label">Starter</span>
-          <h3>Custom Package</h3>
-          <strong>From $500</strong>
-          <p>Includes 2 simple custom pieces. Shipping not included.</p>
-          <a href="mailto:styleimagestun@gmail.com?subject=PEASIS%20Starter%20Custom%20Package%20Inquiry">Inquire</a>
-        </article>
-
-        <article class="package-card package-featured">
-          <span class="package-label">Signature</span>
-          <h3>Custom Package</h3>
-          <strong>From $1,500</strong>
-          <p>Includes 3 custom pieces. Standard shipping included.</p>
-          <a href="mailto:styleimagestun@gmail.com?subject=PEASIS%20Signature%20Custom%20Package%20Inquiry">Inquire</a>
-        </article>
-
-        <article class="package-card">
-          <span class="package-label">Premium</span>
-          <h3>Collection Package</h3>
-          <strong>From $2,500</strong>
-          <p>Includes 5 custom pieces. Standard shipping included.</p>
-          <a href="mailto:styleimagestun@gmail.com?subject=PEASIS%20Premium%20Collection%20Package%20Inquiry">Inquire</a>
-        </article>
-      </div>
-
-      <p class="pricing-note reveal">
-        Complex designs, premium fabrics, bridal work, heavy beading, rush orders, and special embellishment are quoted separately.
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <img src="images/emerald-green-beaded-illusion-gown-1.jpg" alt="PEASIS Fashion" class="hero-img hero-desktop-hide hero-mobile-hide active">
+      <img src="images/white-lace-corset-bridal-gown-1.jpg" alt="PEASIS Fashion" class="hero-img">
+      <img src="images/lavender-beaded-bow-sleeve-occasion-dress-1.jpg" alt="PEASIS Fashion" class="hero-img">
+      <img src="images/lavender-beaded-bow-sleeve-occasion-dress-2.jpg" alt="PEASIS Fashion" class="hero-img">
+      <img src="images/emerald-green-beaded-illusion-gown-2.jpg" alt="PEASIS Fashion" class="hero-img hero-desktop-hide hero-mobile-hide">
+      <img src="images/white-lace-corset-bridal-gown-3.jpg" alt="PEASIS Fashion" class="hero-img">
+      <img src="images/black-off-shoulder-ruffle-maxi-dress-1.jpg" alt="PEASIS Fashion" class="hero-img hero-desktop-hide">
+      <img src="images/black-fit-and-flare-midi-dress-1.jpg" alt="PEASIS Fashion" class="hero-img hero-desktop-hide">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal-up">Designer-Led Custom Fashion</p>
+      <h1 class="hero-headline reveal-up delay-1">
+        Designed by hands<br>
+        <em>with over thirty years</em><br>
+        of experience.
+      </h1>
+      <p class="hero-sub reveal-up delay-2">
+        PEASIS is a custom fashion house where every piece is shaped by craft,<br class="desktop-br"> intention, and an intimate understanding of personal style.
       </p>
-    </section>
+      <div class="hero-ctas reveal-up delay-3">
+        <a href="#collections" class="btn btn-primary">View the Collections</a>
+        <a href="mailto:styleimagestun@gmail.com" class="btn btn-ghost">Begin an Inquiry</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span class="scroll-line"></span>
+      <span class="scroll-text">Scroll</span>
+    </div>
+    <div class="hero-dots">
+      <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+      <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+      <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
+      <button class="hero-dot" data-slide="4" aria-label="Slide 5"></button>
+      <button class="hero-dot" data-slide="5" aria-label="Slide 6"></button>
+      <button class="hero-dot" data-slide="6" aria-label="Slide 7"></button>
+      <button class="hero-dot" data-slide="7" aria-label="Slide 8"></button>
+    </div>
+  </section>
 
-    <section class="process-section" id="process">
-      <div class="section-intro reveal">
-        <p class="eyebrow">The PEASIS Experience</p>
-        <h2>How a PEASIS piece comes to life.</h2>
-        <p>
-          Our process is personal because custom fashion should feel considered from the first message to the final statement.
+  <!-- ═══════════════════════════════ TAGLINE STRIP ═══════════════════════════════ -->
+  <section class="tagline-strip">
+    <div class="tagline-inner">
+      <span>Style. Image. Stun.</span>
+      <span class="dot-sep">&#x2022;</span>
+      <span>Custom &amp; Tailored</span>
+      <span class="dot-sep">&#x2022;</span>
+      <span>30+ Years of Craft</span>
+      <span class="dot-sep">&#x2022;</span>
+      <span>Made with Intention</span>
+      <span class="dot-sep">&#x2022;</span>
+      <span>Style. Image. Stun.</span>
+      <span class="dot-sep">&#x2022;</span>
+      <span>Custom &amp; Tailored</span>
+      <span class="dot-sep">&#x2022;</span>
+      <span>30+ Years of Craft</span>
+      <span class="dot-sep">&#x2022;</span>
+      <span>Made with Intention</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ DESIGNER ═══════════════════════════════ -->
+  <section id="designer" class="section designer-section">
+    <div class="designer-inner">
+      <div class="designer-images">
+        <div class="designer-img-main reveal-left">
+          <img src="images/head-designer-custom-fitting-session-1.jpg" alt="Head Designer at work">
+        </div>
+        <div class="designer-img-accent reveal-left delay-2">
+          <img src="images/head-designer-custom-fitting-session-2.jpg" alt="Custom fitting session">
+        </div>
+        <div class="designer-img-studio reveal-left delay-3">
+          <img src="images/original-style-image-studio.1.jpg" alt="PEASIS Studio">
+        </div>
+      </div>
+      <div class="designer-text">
+        <p class="section-label reveal-up">The Designer</p>
+        <h2 class="section-headline reveal-up delay-1">
+          Thirty years of craft.<br>
+          <em>A legacy, renewed.</em>
+        </h2>
+        <div class="designer-body reveal-up delay-2">
+          <p>
+            Behind every PEASIS piece is a designer who has spent over three decades perfecting the art of personal dressing. Hers is a practice rooted not just in technique, but in a deep care for how clothing makes a person feel when they walk into a room.
+          </p>
+          <p>
+            She fits by hand. She listens carefully. She considers the occasion, the body, the story, and the moment. Her process is unhurried and intentional — because she understands that a garment built well is one that a client carries with them long after the event has passed.
+          </p>
+          <p class="designer-quote">
+            "I lost my shop. But I never lost the knowledge — and I never lost the love for it. This is not a beginning. This is a return."
+          </p>
+          <p>
+            PEASIS is the continuation of a life's work. Built again, not from scratch, but from mastery — and the kind of quiet resilience that only decades of true craft can build.
+          </p>
+        </div>
+        <a href="mailto:styleimagestun@gmail.com" class="btn btn-dark reveal-up delay-3">Begin an Inquiry</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ BRAND PHILOSOPHY ═══════════════════════════════ -->
+  <section class="philosophy-section">
+    <div class="philosophy-inner">
+      <div class="philosophy-bird reveal-up">
+        <img src="Peasis_logo_1._png-removebg-preview.png" alt="PEASIS Peacock" class="philosophy-logo-img">
+      </div>
+      <div class="philosophy-content">
+        <p class="section-label reveal-up">The Meaning of PEASIS</p>
+        <h2 class="philosophy-headline reveal-up delay-1">
+          The peacock does not<br>
+          <em>ask permission to be seen.</em>
+        </h2>
+        <div class="philosophy-body reveal-up delay-2">
+          <p>
+            The peacock has always been a symbol of something rare — the kind of presence that does not demand attention, but commands it effortlessly. Beauty that is self-possessed. Grace that is unhurried. Distinction that is simply, quietly, undeniable.
+          </p>
+          <p>
+            PEASIS was built around this truth: that how you dress is how you are perceived, and that every person deserves to be seen at their best — not just on occasions, but as an expression of who they are.
+          </p>
+          <p class="philosophy-emphasis">
+            Style your image. Own your presence. Stun.
+          </p>
+          <p>
+            We do not make clothing. We shape the visual identity of the people who wear us — with fabrics chosen carefully, silhouettes considered personally, and garments built to carry a memory long after they are worn.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ COLLECTIONS ═══════════════════════════════ -->
+  <section id="collections" class="section collections-section">
+    <div class="collections-header">
+      <p class="section-label reveal-up">The Collections</p>
+      <h2 class="section-headline reveal-up delay-1">
+        Every piece, a<br><em>considered statement.</em>
+      </h2>
+    </div>
+
+    <!-- Collection A: Signature Occasionwear -->
+    <div class="collection-block collection-a">
+      <div class="collection-title-block reveal-up">
+        <span class="collection-number">01</span>
+        <h3>Signature Occasionwear</h3>
+        <p>Gowns and evening pieces crafted for moments that matter.</p>
+      </div>
+      <div class="collection-carousel" id="carousel-a">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <img src="images/emerald-green-beaded-illusion-gown-1.jpg" alt="Emerald Green Beaded Illusion Gown">
+            <div class="slide-caption">Emerald Illusion Gown — I</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/emerald-green-beaded-illusion-gown-2.jpg" alt="Emerald Green Beaded Gown">
+            <div class="slide-caption">Emerald Illusion Gown — II</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/lavender-beaded-bow-sleeve-occasion-dress-1.jpg" alt="Lavender Beaded Bow Sleeve">
+            <div class="slide-caption">Lavender Bow-Sleeve Dress — I</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/lavender-beaded-bow-sleeve-occasion-dress-2.jpg" alt="Lavender Beaded Occasion Dress">
+            <div class="slide-caption">Lavender Bow-Sleeve Dress — II</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/lavender-beaded-bow-sleeve-occasion-dress-3.jpg" alt="Lavender Occasion Dress">
+            <div class="slide-caption">Lavender Bow-Sleeve Dress — III</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/lavender-beaded-bow-sleeve-occasion-dress-4.jpg" alt="Lavender Beaded Dress Full">
+            <div class="slide-caption">Lavender Bow-Sleeve Dress — IV</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/wine-gold-lace-evening-gown-1.jpg" alt="Wine Gold Lace Evening Gown">
+            <div class="slide-caption">Wine &amp; Gold Lace Evening Gown — I</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/wine-gold-lace-evening-gown-2.jpg" alt="Wine Gold Evening Gown">
+            <div class="slide-caption">Wine &amp; Gold Lace Evening Gown — II</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/wine-gold-lace-evening-gown-3.jpg" alt="Wine Gold Lace Gown">
+            <div class="slide-caption">Wine &amp; Gold Lace Evening Gown — III</div>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots-bar"></div>
+      </div>
+    </div>
+
+    <!-- Collection B: Bridal & Lace — Editorial Grid -->
+    <div class="collection-block collection-b">
+      <div class="collection-title-block reveal-up">
+        <span class="collection-number">02</span>
+        <h3>Bridal &amp; Lace</h3>
+        <p>Pieces for the most personal moments — built with patience and beauty.</p>
+      </div>
+      <div class="editorial-grid reveal-up delay-1">
+        <div class="editorial-main">
+          <img src="images/white-lace-corset-bridal-gown-1.jpg" alt="White Lace Corset Bridal Gown">
+          <div class="editorial-caption">White Lace Corset Bridal Gown</div>
+        </div>
+        <div class="editorial-stack">
+          <div class="editorial-item">
+            <img src="images/white-lace-corset-bridal-gown-2.jpg" alt="Bridal Gown Look 2">
+            <div class="editorial-caption">Bridal Gown — Look II</div>
+          </div>
+          <div class="editorial-item">
+            <img src="images/white-lace-corset-bridal-gown-3.jpg" alt="Bridal Gown Look 3">
+            <div class="editorial-caption">Bridal Gown — Look III</div>
+          </div>
+        </div>
+        <div class="editorial-wide">
+          <img src="images/white-lace-corset-bridal-gown-4.jpg" alt="Bridal Gown Full">
+          <div class="editorial-caption">Bridal Gown — Look IV</div>
+        </div>
+        <div class="editorial-lace-details">
+          <div class="lace-detail-item">
+            <img src="images/emerald-beaded-net-lace-detail.jpg" alt="Emerald Beaded Lace">
+            <div class="editorial-caption">Emerald Beaded Lace — I</div>
+          </div>
+          <div class="lace-detail-item">
+            <img src="images/emerald-beaded-net-lace-detail(1).jpg" alt="Emerald Net Lace">
+            <div class="editorial-caption">Emerald Beaded Lace — II</div>
+          </div>
+          <div class="lace-detail-item">
+            <img src="images/lavender-beaded-lace-detail.jpg" alt="Lavender Beaded Lace">
+            <div class="editorial-caption">Lavender Beaded Lace</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collection C: Black Edit — Cinematic Slider -->
+    <div class="collection-block collection-c">
+      <div class="collection-title-block reveal-up">
+        <span class="collection-number">03</span>
+        <h3>The Black Edit</h3>
+        <p>Timeless silhouettes. Quiet authority. Pieces that speak without words.</p>
+      </div>
+      <div class="cinematic-slider" id="slider-c">
+        <div class="cinematic-track">
+          <div class="cinematic-slide">
+            <div class="cinematic-img-wrap">
+              <img src="images/black-fit-and-flare-midi-dress-1.jpg" alt="Black Fit and Flare Midi">
+            </div>
+            <div class="cinematic-info">
+              <h4>Black Fit &amp; Flare Midi — I</h4>
+              <p>A structured silhouette that moves with intention.</p>
+            </div>
+          </div>
+          <div class="cinematic-slide">
+            <div class="cinematic-img-wrap">
+              <img src="images/black-fit-and-flare-midi-dress-2.jpg" alt="Black Fit Flare">
+            </div>
+            <div class="cinematic-info">
+              <h4>Black Fit &amp; Flare Midi — II</h4>
+              <p>Precision in every seam.</p>
+            </div>
+          </div>
+          <div class="cinematic-slide">
+            <div class="cinematic-img-wrap">
+              <img src="images/black-fit-and-flare-midi-dress-3.jpg" alt="Black Midi Dress">
+            </div>
+            <div class="cinematic-info">
+              <h4>Black Fit &amp; Flare Midi — III</h4>
+              <p>Every angle considered.</p>
+            </div>
+          </div>
+          <div class="cinematic-slide">
+            <div class="cinematic-img-wrap">
+              <img src="images/black-fit-and-flare-midi-dress-4.jpg" alt="Black Midi Look">
+            </div>
+            <div class="cinematic-info">
+              <h4>Black Fit &amp; Flare Midi — IV</h4>
+              <p>The complete editorial vision.</p>
+            </div>
+          </div>
+          <div class="cinematic-slide">
+            <div class="cinematic-img-wrap">
+              <img src="images/black-off-shoulder-ruffle-maxi-dress-1.jpg" alt="Black Off Shoulder Ruffle Maxi">
+            </div>
+            <div class="cinematic-info">
+              <h4>Black Off-Shoulder Ruffle Maxi — I</h4>
+              <p>Drama in restraint.</p>
+            </div>
+          </div>
+          <div class="cinematic-slide">
+            <div class="cinematic-img-wrap">
+              <img src="images/black-off-shoulder-ruffle-maxi-dress-2.jpg" alt="Black Ruffle Maxi">
+            </div>
+            <div class="cinematic-info">
+              <h4>Black Off-Shoulder Ruffle Maxi — II</h4>
+              <p>Texture in every layer.</p>
+            </div>
+          </div>
+          <div class="cinematic-slide">
+            <div class="cinematic-img-wrap">
+              <img src="images/classic-black-button-pencil-dress-1.jpg" alt="Classic Black Pencil Dress">
+            </div>
+            <div class="cinematic-info">
+              <h4>Classic Black Pencil — I</h4>
+              <p>Understated. Unforgettable.</p>
+            </div>
+          </div>
+          <div class="cinematic-slide">
+            <div class="cinematic-img-wrap">
+              <img src="images/classic-black-button-pencil-dress-2.jpg" alt="Black Pencil Dress">
+            </div>
+            <div class="cinematic-info">
+              <h4>Classic Black Pencil — II</h4>
+              <p>Clean lines, careful cut.</p>
+            </div>
+          </div>
+          <div class="cinematic-slide">
+            <div class="cinematic-img-wrap">
+              <img src="images/classic-black-button-pencil-dress-3.jpg" alt="Pencil Dress">
+            </div>
+            <div class="cinematic-info">
+              <h4>Classic Black Pencil — III</h4>
+              <p>The silhouette that endures.</p>
+            </div>
+          </div>
+          <div class="cinematic-slide">
+            <div class="cinematic-img-wrap">
+              <img src="images/classic-black-button-pencil-dress-4.jpg" alt="Pencil Dress Look">
+            </div>
+            <div class="cinematic-info">
+              <h4>Classic Black Pencil — IV</h4>
+              <p>Black, in its truest form.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cinematic-controls">
+          <button class="cin-prev" aria-label="Previous">&#8592;</button>
+          <div class="cin-progress">
+            <div class="cin-progress-bar"></div>
+          </div>
+          <button class="cin-next" aria-label="Next">&#8594;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collection D: Ankara & Statement Sets — Horizontal Cards -->
+    <div class="collection-block collection-d">
+      <div class="collection-title-block reveal-up">
+        <span class="collection-number">04</span>
+        <h3>Ankara &amp; Statement Sets</h3>
+        <p>Rooted in culture. Bold in presence. Entirely individual.</p>
+      </div>
+      <div class="horizontal-cards-scroll" id="hscroll-d">
+        <div class="horizontal-cards-track">
+          <div class="hcard">
+            <img src="images/ankara-tie-front-two-piece-set-1.jpg" alt="Ankara Tie Front Two Piece">
+            <div class="hcard-caption">Ankara Tie-Front Set — I</div>
+          </div>
+          <div class="hcard">
+            <img src="images/ankara-tie-front-two-piece-set-2.jpg" alt="Ankara Two Piece">
+            <div class="hcard-caption">Ankara Tie-Front Set — II</div>
+          </div>
+          <div class="hcard">
+            <img src="images/ankara-tie-front-two-piece-set-3.jpg" alt="Ankara Two Piece">
+            <div class="hcard-caption">Ankara Tie-Front Set — III</div>
+          </div>
+          <div class="hcard">
+            <img src="images/burgundy-blouse-floral-maxi-skirt-set-1.jpg" alt="Brown Blouse Floral Maxi">
+            <div class="hcard-caption">Brown &amp; Floral Maxi Set — I</div>
+          </div>
+          <div class="hcard">
+            <img src="images/burgundy-blouse-floral-maxi-skirt-set-2.jpg" alt="Brown Floral Maxi Set">
+            <div class="hcard-caption">Brown &amp; Floral Maxi Set — II</div>
+          </div>
+          <div class="hcard">
+            <img src="images/printed-wide-leg-pants-1.jpg" alt="Printed Wide Leg Pants">
+            <div class="hcard-caption">Printed Wide-Leg Set — I</div>
+          </div>
+          <div class="hcard">
+            <img src="images/printed-wide-leg-pants-2.jpg" alt="Wide Leg Pants">
+            <div class="hcard-caption">Printed Wide-Leg Set — II</div>
+          </div>
+          <div class="hcard">
+            <img src="images/printed-wide-leg-pants-3.jpg" alt="Wide Leg Pants">
+            <div class="hcard-caption">Printed Wide-Leg Set — III</div>
+          </div>
+          <div class="hcard">
+            <img src="images/printed-wide-leg-pants-4.jpg" alt="Printed Wide Leg">
+            <div class="hcard-caption">Printed Wide-Leg Set — IV</div>
+          </div>
+          <div class="hcard">
+            <img src="images/blue-floral-applique-shift-dress.jpg" alt="Blue Floral Applique Shift">
+            <div class="hcard-caption">Blue Floral Appliqué Shift</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- ═══════════════════════════════ IN MOTION ═══════════════════════════════ -->
+  <section id="motion" class="section motion-section">
+    <div class="motion-header">
+      <p class="section-label reveal-up">PEASIS In Motion</p>
+      <h2 class="section-headline reveal-up delay-1">
+        The garment, alive.<br>
+        <em>The transformation, witnessed.</em>
+      </h2>
+      <p class="motion-intro reveal-up delay-2">
+        Some things are best experienced in movement — the drape of a gown, the moment a sleeve catches the light, the quiet magic of a fitting that becomes a finished piece.
+      </p>
+    </div>
+    <div class="video-carousel-outer">
+      <div class="video-carousel-overflow">
+        <div class="video-carousel-track" id="videoCarouselTrack">
+
+          <div class="video-card">
+            <div class="video-embed-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/Rl6ORTzVMAw"
+                title="Green Emerald Beaded Net Lace Detail — Transformation Edit"
+                frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-info">
+              <span class="video-tag">Transformation Edit</span>
+              <h4>Emerald Beaded Net Lace</h4>
+              <p>From fabric to finished gown — the emerald transformation.</p>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-embed-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/HI3oa2WjcLw"
+                title="Lavender Beaded Lace — Full Event Outfit"
+                frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-info">
+              <span class="video-tag">Full Event Look</span>
+              <h4>Lavender Beaded Lace</h4>
+              <p>The complete event outfit, worn and alive.</p>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-embed-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/FWt_x0OLYRI"
+                title="Lavender Beaded Lace — Transformation Edit"
+                frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-info">
+              <span class="video-tag">Transformation Edit</span>
+              <h4>Lavender — The Process</h4>
+              <p>Watching the lavender piece take shape from the beginning.</p>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-embed-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/s1Qa2-EkOoY"
+                title="Lavender Beaded Lace — Designer Fitting"
+                frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-card-info">
+              <span class="video-tag">The Fitting</span>
+              <h4>Lavender — Designer on Client</h4>
+              <p>The head designer fitting the piece on the client — care, made visible.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="video-carousel-controls">
+        <button class="vc-prev" id="vcPrev" aria-label="Previous video">&#8592;</button>
+        <div class="vc-progress"><div class="vc-progress-bar" id="vcProgressBar"></div></div>
+        <div class="vc-dots" id="vcDots"></div>
+        <button class="vc-next" id="vcNext" aria-label="Next video">&#8594;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ PACKAGES ═══════════════════════════════ -->
+  <section id="packages" class="section packages-section">
+    <div class="packages-header">
+      <p class="section-label reveal-up">Investment</p>
+      <h2 class="section-headline reveal-up delay-1">
+        Choose your<br><em>PEASIS experience.</em>
+      </h2>
+    </div>
+    <div class="packages-grid">
+      <div class="package-card reveal-up">
+        <div class="package-top">
+          <span class="package-tier">Starter</span>
+          <h3 class="package-name">Custom Package</h3>
+          <p class="package-price">From <span>$500</span></p>
+        </div>
+        <ul class="package-features">
+          <li>2 custom pieces</li>
+          <li>Personal consultation</li>
+          <li>Designer-led fit</li>
+          <li><em>Shipping not included</em></li>
+        </ul>
+        <a href="mailto:styleimagestun@gmail.com?subject=Starter Custom Package Inquiry" class="btn btn-outline-dark">Begin Inquiry</a>
+      </div>
+
+      <div class="package-card package-featured reveal-up delay-1">
+        <div class="package-badge">Most Chosen</div>
+        <div class="package-top">
+          <span class="package-tier">Signature</span>
+          <h3 class="package-name">Custom Package</h3>
+          <p class="package-price">From <span>$1,500</span></p>
+        </div>
+        <ul class="package-features">
+          <li>3 custom pieces</li>
+          <li>Personal consultation</li>
+          <li>Designer-led fit &amp; finish</li>
+          <li>Standard shipping included</li>
+        </ul>
+        <a href="mailto:styleimagestun@gmail.com?subject=Signature Custom Package Inquiry" class="btn btn-primary">Begin Inquiry</a>
+      </div>
+
+      <div class="package-card reveal-up delay-2">
+        <div class="package-top">
+          <span class="package-tier">Premium</span>
+          <h3 class="package-name">Collection Package</h3>
+          <p class="package-price">From <span>$2,500</span></p>
+        </div>
+        <ul class="package-features">
+          <li>5 custom pieces</li>
+          <li>Full designer consultation</li>
+          <li>Detailed fit &amp; finish sessions</li>
+          <li>Standard shipping included</li>
+        </ul>
+        <a href="mailto:styleimagestun@gmail.com?subject=Premium Collection Package Inquiry" class="btn btn-outline-dark">Begin Inquiry</a>
+      </div>
+    </div>
+    <div class="packages-note reveal-up">
+      <p>
+        Final pricing is shaped by fabric selection, complexity, embellishment, measurements, timeline, and delivery location. Complex designs, premium fabrics, bridal work, heavy beading, and rush orders are quoted individually — every piece is priced with honesty and care.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ PROCESS ═══════════════════════════════ -->
+  <section id="process" class="section process-section">
+    <div class="process-header">
+      <p class="section-label reveal-up">How It Works</p>
+      <h2 class="section-headline reveal-up delay-1">
+        A journey,<br><em>from vision to statement.</em>
+      </h2>
+    </div>
+    <div class="process-timeline">
+      <div class="process-line-track">
+        <div class="process-line-fill" id="processLineFill"></div>
+      </div>
+      <div class="process-step" data-step="0">
+        <div class="step-marker">
+          <div class="step-ring"></div>
+          <div class="step-dot"></div>
+          <span class="step-num">01</span>
+        </div>
+        <div class="step-content">
+          <h3>Begin with an Inquiry</h3>
+          <p>The client reaches out with interest, inspiration, an occasion, or simply a sense of what they want to feel. No detail is too small. No idea is too early.</p>
+        </div>
+      </div>
+      <div class="process-step" data-step="1">
+        <div class="step-marker">
+          <div class="step-ring"></div>
+          <div class="step-dot"></div>
+          <span class="step-num">02</span>
+        </div>
+        <div class="step-content">
+          <h3>Refine the Vision</h3>
+          <p>Style direction, fabric preferences, fit considerations, and personal details are shaped together carefully. This is a conversation, not a transaction.</p>
+        </div>
+      </div>
+      <div class="process-step" data-step="2">
+        <div class="step-marker">
+          <div class="step-ring"></div>
+          <div class="step-dot"></div>
+          <span class="step-num">03</span>
+        </div>
+        <div class="step-content">
+          <h3>Craft with Care</h3>
+          <p>The garment is made with detailed attention, technical precision, and the kind of designer care that only thirty years of practice can produce.</p>
+        </div>
+      </div>
+      <div class="process-step" data-step="3">
+        <div class="step-marker">
+          <div class="step-ring"></div>
+          <div class="step-dot"></div>
+          <span class="step-num">04</span>
+        </div>
+        <div class="step-content">
+          <h3>Fit, Finish &amp; Elevate</h3>
+          <p>Every piece is adjusted, reviewed, and refined before it leaves the atelier. The finish is not an afterthought — it is where the magic is completed.</p>
+        </div>
+      </div>
+      <div class="process-step" data-step="4">
+        <div class="step-marker">
+          <div class="step-ring"></div>
+          <div class="step-dot"></div>
+          <span class="step-num">05</span>
+        </div>
+        <div class="step-content">
+          <h3>Deliver the Final Statement</h3>
+          <p>The finished piece arrives not merely as clothing, but as a visual expression of the client's identity — styled, considered, and made to be remembered.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+  <section id="contact" class="section contact-section">
+    <div class="contact-inner">
+      <div class="contact-visual reveal-left">
+        <img src="images/lavender-beaded-bow-sleeve-occasion-dress-1.jpg" alt="PEASIS Custom Piece">
+        <div class="contact-visual-accent">
+          <img src="images/wine-gold-lace-evening-gown-1.jpg" alt="PEASIS Evening Gown">
+        </div>
+      </div>
+      <div class="contact-content reveal-right">
+        <p class="section-label">Begin Your PEASIS Piece</p>
+        <h2 class="section-headline">
+          Let's create something<br>
+          <em>beautiful together.</em>
+        </h2>
+        <p class="contact-body">
+          Every PEASIS piece starts with a conversation. Whether you have a vision or simply a feeling — reach out, and we will shape something extraordinary from there.
         </p>
+        <div class="contact-actions">
+          <a href="mailto:styleimagestun@gmail.com" class="btn btn-primary contact-cta">Begin an Inquiry</a>
+          <a href="mailto:styleimagestun@gmail.com" class="contact-email-link">styleimagestun@gmail.com</a>
+        </div>
+        <div class="contact-detail">
+          <p>All inquiries are answered personally. We look forward to creating with you.</p>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="process-timeline">
-        <article class="process-step reveal">
-          <span>01</span>
-          <h3>Begin with an inquiry</h3>
-          <p>The client reaches out with interest, inspiration, occasion, timeline, or a style direction.</p>
-        </article>
-
-        <article class="process-step reveal">
-          <span>02</span>
-          <h3>Refine the vision</h3>
-          <p>We shape the fit, fabric direction, silhouette, and personal details that make the piece feel intentional.</p>
-        </article>
-
-        <article class="process-step reveal">
-          <span>03</span>
-          <h3>Craft with care</h3>
-          <p>The garment is created with attention to balance, finish, structure, and the designer’s eye.</p>
-        </article>
-
-        <article class="process-step reveal">
-          <span>04</span>
-          <h3>Fit, finish, and elevate</h3>
-          <p>The piece is adjusted and refined so it carries both beauty and confidence.</p>
-        </article>
-
-        <article class="process-step reveal">
-          <span>05</span>
-          <h3>Deliver the final statement</h3>
-          <p>The finished piece becomes a visual expression of image, presence, and memory.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="contact-section" id="contact">
-      <div class="contact-card reveal">
-        <img src="Peasis logo 1. png.png" alt="PEASIS Fashion logo">
-        <p class="eyebrow">Start your PEASIS piece</p>
-        <h2>Let’s create something beautiful, personal, and unforgettable.</h2>
-        <p>
-          Email us with your style direction, location, timeline, measurements if available, and any inspiration you have.
-        </p>
-        <a href="mailto:styleimagestun@gmail.com?subject=PEASIS%20Fashion%20Inquiry" class="btn btn-dark">styleimagestun@gmail.com</a>
-      </div>
-    </section>
-  </main>
-
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
   <footer class="site-footer">
-    <div>
-      <img src="Peasis logo 1. png.png" alt="PEASIS Fashion logo">
-      <p>Custom fashion, occasionwear, African-inspired pieces, and tailored looks made with care.</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#home">
+          <img src="Peasis_logo_1._png-removebg-preview.png" alt="PEASIS Fashion" class="footer-logo">
+        </a>
+        <p class="footer-tagline">Style. Image. Stun.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#designer">The Designer</a>
+        <a href="#collections">Collections</a>
+        <a href="#motion">In Motion</a>
+        <a href="#packages">Packages</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="mailto:styleimagestun@gmail.com">styleimagestun@gmail.com</a>
+      </div>
     </div>
-
-    <div class="footer-links">
-      <a href="#designer">The Designer</a>
-      <a href="#collections">Collections</a>
-      <a href="#motion">In Motion</a>
-      <a href="#packages">Packages</a>
-      <a href="#process">Process</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <div>
-      <h4>Contact</h4>
-      <a href="mailto:styleimagestun@gmail.com">styleimagestun@gmail.com</a>
-      <small>© 2026 PEASIS Fashion. All rights reserved.</small>
+    <div class="footer-bottom">
+      <p>&copy; <span id="footerYear"></span> PEASIS Fashion. All rights reserved.</p>
     </div>
   </footer>
 
