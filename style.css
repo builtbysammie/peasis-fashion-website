@@ -26,7 +26,7 @@
   --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
   --ease-inout:  cubic-bezier(0.4, 0, 0.2, 1);
 
-  --nav-h:       72px;
+  --nav-h:       92px;
   --section-pad: 96px;
 }
 
@@ -197,9 +197,9 @@ button { cursor: pointer; border: none; background: none; }
   justify-content: space-between;
 }
 .nav-logo .logo-img {
-  height: 56px;
+  height: 80px;
   width: auto;
-  max-width: 160px;
+  max-width: 220px;
   transition: filter 0.3s;
   filter: brightness(0) invert(1);
 }
@@ -1474,6 +1474,233 @@ button { cursor: pointer; border: none; background: none; }
   transform: scale(1.4);
 }
 
+/* ── Package accordion (mobile only) ── */
+/* Desktop: hide mobile-only lists, show desktop list */
+.package-features--mobile-visible { display: none; }
+.package-features--desktop        { display: block; }
+.package-accordion                 { display: none; }
+
+/* Accordion base styles (activated via JS on mobile) */
+.accordion-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  border-top: 1px solid var(--border);
+  padding: 12px 0;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  transition: color 0.25s;
+}
+.package-featured .accordion-toggle {
+  border-color: rgba(255,255,255,0.1);
+  color: var(--gold-lt);
+}
+.accordion-toggle:hover { color: var(--charcoal); }
+.package-featured .accordion-toggle:hover { color: var(--cream); }
+
+.accordion-icon {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  flex-shrink: 0;
+}
+.accordion-icon::before,
+.accordion-icon::after {
+  content: '';
+  position: absolute;
+  background: currentColor;
+  transition: transform 0.35s var(--ease-out), opacity 0.35s;
+}
+.accordion-icon::before {
+  width: 100%; height: 1px;
+  top: 50%; left: 0;
+  transform: translateY(-50%);
+}
+.accordion-icon::after {
+  width: 1px; height: 100%;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+}
+.accordion-toggle[aria-expanded="true"] .accordion-icon::after {
+  transform: translateX(-50%) rotate(90deg);
+  opacity: 0;
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s var(--ease-out);
+}
+.accordion-body.open {
+  max-height: 400px;
+}
+.package-features--extra {
+  padding: 8px 0 4px;
+}
+
+/* ── Trust section — refined & luxurious ── */
+.packages-trust {
+  max-width: 1320px;
+  margin: 64px auto 0;
+  padding: 0 40px;
+}
+.trust-header {
+  margin-bottom: 40px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border-gold);
+}
+.trust-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  margin-bottom: 10px;
+  letter-spacing: 0.01em;
+}
+.trust-intro {
+  font-size: 0.88rem;
+  color: var(--charcoal-lt);
+  font-style: italic;
+  line-height: 1.7;
+  max-width: 560px;
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.trust-item {
+  padding: 0 32px 0 0;
+  border-right: 1px solid var(--border);
+}
+.trust-item:last-child {
+  border-right: none;
+  padding-right: 0;
+  padding-left: 32px;
+}
+.trust-item:not(:first-child):not(:last-child) {
+  padding: 0 32px;
+}
+.trust-item-inner {}
+.trust-label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.trust-item p {
+  font-size: 0.85rem;
+  line-height: 1.85;
+  color: var(--charcoal-lt);
+}
+
+/* ── Pricing note — with title ── */
+.packages-note {
+  max-width: 1320px;
+  margin: 40px auto 0;
+  padding: 36px 40px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--ivory);
+}
+.packages-note-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+.packages-note p:not(.packages-note-title) {
+  font-size: 0.82rem;
+  color: var(--charcoal-lt);
+  line-height: 1.9;
+  max-width: 760px;
+  font-style: italic;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   OVERFLOW CONTAINMENT — prevent horizontal page shift
+   ───────────────────────────────────────────────────────────── */
+.package-positioning {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: var(--charcoal-lt);
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  font-style: italic;
+}
+.package-featured .package-positioning {
+  color: rgba(247,243,238,0.6);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.package-bottomline {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: var(--gold);
+  margin-bottom: 28px;
+  padding-top: 16px;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+.package-featured .package-bottomline {
+  color: var(--gold-lt);
+}
+
+/* ── Before You Begin — trust section ── */
+.packages-trust {
+  max-width: 1320px;
+  margin: 56px auto 0;
+  padding: 48px 40px;
+  background: var(--cream-dark);
+  border-top: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
+}
+.trust-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  margin-bottom: 32px;
+  letter-spacing: 0.02em;
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.trust-item {}
+.trust-label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.trust-item p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: var(--charcoal-lt);
+}
+
 /* ─────────────────────────────────────────────────────────────
    OVERFLOW CONTAINMENT — prevent horizontal page shift
    ───────────────────────────────────────────────────────────── */
@@ -1671,11 +1898,12 @@ img, iframe, video { max-width: 100%; }
 
   .nav-inner { padding: 0 16px; }
 
-  /* LOGO — larger and clear on mobile */
+  /* LOGO — sized appropriately for mobile, anchored left */
   .nav-logo .logo-img {
     height: auto;
-    width: 135px;
-    max-width: 42vw;
+    width: 120px;
+    max-width: 38vw;
+    margin-left: 0;
   }
 
   /* HERO */
@@ -1808,7 +2036,28 @@ img, iframe, video { max-width: 100%; }
   }
   .package-card { padding: 36px 28px 32px; }
   .package-card.package-featured { transform: none; }
-  .packages-note { padding: 24px 20px; }
+
+  /* Mobile: switch list visibility and show accordion */
+  .package-features--desktop       { display: none !important; }
+  .package-features--mobile-visible { display: block !important; }
+  .package-accordion                { display: block; }
+
+  /* Trust section mobile */
+  .packages-trust { padding: 0 20px; margin-top: 48px; }
+  .trust-header { margin-bottom: 28px; padding-bottom: 20px; }
+  .trust-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .trust-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0 !important;
+  }
+  .trust-item:last-child { border-bottom: none; }
+
+  /* Pricing note mobile */
+  .packages-note { padding: 28px 20px; }
 
   /* PROCESS */
   .process-header { padding: 0 20px 48px; }

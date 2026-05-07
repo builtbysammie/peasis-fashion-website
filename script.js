@@ -286,6 +286,33 @@ revealEls.forEach(el => revealObserver.observe(el));
   window.addEventListener('resize', () => { buildDots(); go(0); });
 })();
 
+/* ── Package accordion (mobile only) ────────────────────────── */
+(function initPackageAccordions() {
+  const toggles = document.querySelectorAll('.accordion-toggle');
+  if (!toggles.length) return;
+
+  toggles.forEach(toggle => {
+    const body = toggle.nextElementSibling;
+    toggle.addEventListener('click', () => {
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      // Close all others
+      toggles.forEach(t => {
+        t.setAttribute('aria-expanded', 'false');
+        const b = t.nextElementSibling;
+        if (b) { b.classList.remove('open'); b.setAttribute('aria-hidden', 'true'); }
+        t.querySelector('.accordion-label').textContent = 'View Full Inclusions';
+      });
+      // Toggle this one
+      if (!isOpen) {
+        toggle.setAttribute('aria-expanded', 'true');
+        body.classList.add('open');
+        body.setAttribute('aria-hidden', 'false');
+        toggle.querySelector('.accordion-label').textContent = 'Hide Inclusions';
+      }
+    });
+  });
+})();
+
 /* ── Process timeline — scissors animation ───────────────────── */
 (function initProcess() {
   const steps    = document.querySelectorAll('.process-step');
