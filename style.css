@@ -37,6 +37,9 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -46,6 +49,9 @@ body {
   font-weight: 300;
   line-height: 1.7;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
 }
 
 img {
@@ -191,14 +197,13 @@ button { cursor: pointer; border: none; background: none; }
   justify-content: space-between;
 }
 .nav-logo .logo-img {
-  height: 44px;
+  height: 56px;
   width: auto;
+  max-width: 160px;
   transition: filter 0.3s;
-  /* On transparent/dark hero background: make logo white */
   filter: brightness(0) invert(1);
 }
 #navbar.scrolled .nav-logo .logo-img {
-  /* On scrolled light cream nav: show logo in natural dark colour */
   filter: none;
 }
 .nav-links {
@@ -1409,11 +1414,11 @@ button { cursor: pointer; border: none; background: none; }
   border-bottom: 1px solid rgba(255,255,255,0.07);
 }
 .footer-logo {
-  height: 48px;
+  height: 72px;
   width: auto;
-  /* Dark charcoal footer - invert to white */
+  max-width: 200px;
   filter: brightness(0) invert(1);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 .footer-tagline {
   font-size: 0.68rem;
@@ -1470,7 +1475,192 @@ button { cursor: pointer; border: none; background: none; }
 }
 
 /* ─────────────────────────────────────────────────────────────
-   MOBILE — 768px and below
+   OVERFLOW CONTAINMENT — prevent horizontal page shift
+   ───────────────────────────────────────────────────────────── */
+.section,
+.hero,
+.tagline-strip,
+.designer-section,
+.philosophy-section,
+.collections-section,
+.motion-section,
+.packages-section,
+.process-section,
+.contact-section,
+.site-footer {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.collection-block,
+.collection-carousel,
+.cinematic-slider,
+.horizontal-cards-scroll,
+.video-carousel-outer,
+.video-carousel-overflow {
+  max-width: 100%;
+  /* carousels clip internally, never push the page */
+  overflow-x: hidden;
+}
+
+/* Horizontal scroll containers are the exception — they scroll *inside* */
+.horizontal-cards-scroll {
+  overflow-x: auto;
+}
+.video-carousel-overflow {
+  overflow: hidden;
+}
+
+/* Prevent any single element being wider than viewport */
+* { max-width: 100%; }
+img, iframe, video { max-width: 100%; }
+
+/* Large headings must wrap, never overflow */
+.section-headline,
+.hero-headline,
+.philosophy-headline,
+.step-content h3 {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CAROUSEL SCROLL HINTS
+   ───────────────────────────────────────────────────────────── */
+.carousel-scroll-hint {
+  max-width: 1320px;
+  margin: 0 auto -8px;
+  padding: 0 40px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.carousel-scroll-hint--light .hint-text,
+.carousel-scroll-hint--light .hint-arrow {
+  color: rgba(247,243,238,0.45);
+}
+.hint-text {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(26,24,20,0.38);
+}
+.hint-arrow {
+  font-size: 0.7rem;
+  color: var(--gold);
+  animation: hintPulse 2s ease-in-out infinite;
+}
+.hint-arrow:last-child { animation-delay: 0.4s; }
+@keyframes hintPulse {
+  0%, 100% { opacity: 0.4; transform: translateX(0); }
+  50%       { opacity: 1;   transform: translateX(3px); }
+}
+.hint-arrow:first-child {
+  animation-name: hintPulseLeft;
+}
+@keyframes hintPulseLeft {
+  0%, 100% { opacity: 0.4; transform: translateX(0); }
+  50%       { opacity: 1;   transform: translateX(-3px); }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PROCESS — SCISSORS ANIMATION
+   ───────────────────────────────────────────────────────────── */
+
+/* Replace the simple fill line with a scissors that cuts through */
+.process-line-track {
+  position: absolute;
+  left: calc(40px + 22px);
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+  overflow: visible;
+}
+.process-line-fill {
+  width: 100%;
+  background: linear-gradient(to bottom, var(--gold), var(--gold-lt));
+  height: 0%;
+  transition: height 0.08s linear;
+  position: relative;
+}
+
+/* Scissors icon rides the top of the fill line */
+.process-line-fill::after {
+  content: '✂';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  font-size: 14px;
+  color: var(--gold);
+  line-height: 1;
+  filter: drop-shadow(0 0 4px rgba(184,157,106,0.5));
+  transition: bottom 0.08s linear;
+  /* Snip animation when a step becomes active */
+  animation: none;
+}
+
+/* When line is actively growing, scissors snips */
+.process-line-fill.snipping::after {
+  animation: scissorSnip 0.35s ease-out;
+}
+@keyframes scissorSnip {
+  0%   { transform: translateX(-50%) rotate(90deg) scale(1); }
+  30%  { transform: translateX(-50%) rotate(75deg) scale(1.3); }
+  60%  { transform: translateX(-50%) rotate(105deg) scale(1.2); }
+  100% { transform: translateX(-50%) rotate(90deg) scale(1); }
+}
+
+/* Active step gets a gold cut line through it */
+.process-step.active .step-ring {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(184,157,106,0.15);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   FOOTER — DESIGNER CREDIT
+   ───────────────────────────────────────────────────────────── */
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.designer-credit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: opacity 0.25s;
+}
+.designer-credit:hover { opacity: 0.8; }
+.designer-mark {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  overflow: visible;
+}
+.designer-credit span {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: rgba(247,243,238,0.3);
+  white-space: nowrap;
+}
+.designer-credit span em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.78rem;
+  color: rgba(212,185,138,0.55);
+  letter-spacing: 0.04em;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MOBILE — 900px and below
    ───────────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
 
@@ -1479,17 +1669,25 @@ button { cursor: pointer; border: none; background: none; }
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
 
-  .nav-inner { padding: 0 20px; }
+  .nav-inner { padding: 0 16px; }
+
+  /* LOGO — larger and clear on mobile */
+  .nav-logo .logo-img {
+    height: auto;
+    width: 135px;
+    max-width: 42vw;
+  }
 
   /* HERO */
   .hero-content { padding: 0 20px; padding-top: var(--nav-h); }
-  .hero-headline { font-size: clamp(2.4rem, 9vw, 3.8rem); }
-  .hero-sub { font-size: 0.9rem; }
+  .hero-headline { font-size: clamp(2.2rem, 8vw, 3.2rem); }
+  .hero-sub { font-size: 0.88rem; max-width: 100%; }
   .hero-ctas { flex-direction: column; gap: 12px; }
   .hero-ctas .btn { width: 100%; text-align: center; }
-  .hero-dots { right: 20px; }
+  .hero-dots { right: 16px; }
 
-  /* TAGLINE */
+  /* TAGLINE — constrain so it never pushes width */
+  .tagline-strip { overflow: hidden; }
   .tagline-inner { animation-duration: 18s; }
 
   /* DESIGNER */
@@ -1517,7 +1715,7 @@ button { cursor: pointer; border: none; background: none; }
     padding: 0 20px;
   }
   .philosophy-bird { justify-content: flex-start; }
-  .philosophy-logo-img { width: 120px; }
+  .philosophy-logo-img { width: 100px; }
 
   /* COLLECTIONS */
   .collections-header { padding: 0 20px 40px; }
@@ -1528,10 +1726,12 @@ button { cursor: pointer; border: none; background: none; }
   }
   .collection-title-block p { margin-left: 0; text-align: left; max-width: 100%; }
 
+  /* Carousel hint on mobile */
+  .carousel-scroll-hint { padding: 0 20px 12px; }
+
   /* Carousel A */
   .collection-carousel { padding: 0 20px; overflow: hidden; }
   .carousel-slide { flex: 0 0 calc(100% - 8px); }
-  /* Use aspect ratio so full outfits show, not a fixed crop */
   .carousel-slide img {
     height: auto;
     aspect-ratio: 2 / 3;
@@ -1562,7 +1762,7 @@ button { cursor: pointer; border: none; background: none; }
   .lace-detail-item img { height: 180px; object-position: center center; }
 
   /* Cinematic Slider C — fix face/outfit cropping on mobile */
-  .cinematic-slider { padding: 0 20px; }
+  .cinematic-slider { padding: 0 20px; overflow: hidden; }
   .cinematic-slide {
     flex: 0 0 calc(100% - 8px);
     flex-direction: column;
@@ -1588,12 +1788,17 @@ button { cursor: pointer; border: none; background: none; }
 
   /* IN MOTION — video carousel on mobile */
   .motion-header { padding: 0 20px 40px; }
-  .video-carousel-outer { padding: 0 20px; }
+  .video-carousel-outer { padding: 0 20px; overflow: hidden; }
+  .video-carousel-overflow { overflow: hidden; }
   .video-card {
     flex: 0 0 85vw;
     max-width: 320px;
   }
   .video-embed-wrap { height: 240px; }
+  .video-embed-wrap iframe {
+    width: 100%;
+    max-width: 100%;
+  }
 
   /* PACKAGES */
   .packages-header { padding: 0 20px 40px; }
@@ -1630,7 +1835,17 @@ button { cursor: pointer; border: none; background: none; }
     gap: 36px;
     padding: 0 20px 40px;
   }
+  .footer-logo {
+    height: auto;
+    width: 150px;
+    max-width: 55vw;
+  }
   .footer-bottom { padding: 16px 20px; }
+  .footer-bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 
   .section > * { padding-left: 20px; padding-right: 20px; }
 }

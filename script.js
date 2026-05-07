@@ -286,9 +286,9 @@ revealEls.forEach(el => revealObserver.observe(el));
   window.addEventListener('resize', () => { buildDots(); go(0); });
 })();
 
-/* ── Process timeline animation ──────────────────────────────── */
+/* ── Process timeline — scissors animation ───────────────────── */
 (function initProcess() {
-  const steps   = document.querySelectorAll('.process-step');
+  const steps    = document.querySelectorAll('.process-step');
   const lineFill = document.getElementById('processLineFill');
   if (!steps.length || !lineFill) return;
 
@@ -302,22 +302,33 @@ revealEls.forEach(el => revealObserver.observe(el));
 
   steps.forEach(s => stepObserver.observe(s));
 
-  // Active state + line fill on scroll
+  let lastPct = 0;
+  let snipTimer;
+
   function updateProcessOnScroll() {
     const timelineEl = document.querySelector('.process-timeline');
     if (!timelineEl) return;
 
-    const tlRect = timelineEl.getBoundingClientRect();
+    const tlRect  = timelineEl.getBoundingClientRect();
     const windowH = window.innerHeight;
-    const tlTop = tlRect.top;
+    const tlTop   = tlRect.top;
     const tlHeight = tlRect.height;
 
-    // How far we've scrolled into the timeline
     const scrolled = Math.max(0, windowH * 0.6 - tlTop);
     const pct = Math.min(100, (scrolled / tlHeight) * 100);
     lineFill.style.height = pct + '%';
 
-    // Activate steps
+    // Trigger scissors snip when the line crosses a step marker
+    if (pct > lastPct + 4) {
+      clearTimeout(snipTimer);
+      lineFill.classList.remove('snipping');
+      // Force reflow so animation restarts
+      void lineFill.offsetWidth;
+      lineFill.classList.add('snipping');
+      snipTimer = setTimeout(() => lineFill.classList.remove('snipping'), 400);
+      lastPct = pct;
+    }
+
     steps.forEach(step => {
       const rect = step.getBoundingClientRect();
       const midpoint = rect.top + rect.height / 2;
